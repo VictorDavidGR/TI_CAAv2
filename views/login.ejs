@@ -12,19 +12,22 @@
         height: 100vh;
     }
     .centrar-verticalmente{
-    margin-top: 5%;
+    margin-top: 28%;
     left: 50%;
     background: linear-gradient(180deg, #070707, #938413);
     opacity: 0.95;
     border-radius: 60px;
     
     }
+    .div{
+      min-height:100vh;/*importante*/
+      position: relative;
+    }
     
     </style>
     <body class="text-center card  body" style="align-items: center; height: 100vh;">
-            <div class="centrar-verticalmente">
-    
-            
+      <div class="div">
+        <div class="centrar-verticalmente">
             <div class="card-body" style="align-items: center;width: 332px;height: 432px;">
                     <main class="form-signin w-100 m-auto">
                       <form>
@@ -44,5 +47,7 @@
                     </main>
             </div>
     </div>
+      </div>
+            
     </body>
 <%- include('templates/pie')%>
