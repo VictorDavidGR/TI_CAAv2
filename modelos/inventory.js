@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 module.exports=(conexion)=>{
-    const InventorySchedule=conexion.define('inventory',{
+    const InventorySchema=conexion.define('inventory',{
         idInventory:{
             type:Sequelize.INTEGER,   //Tipo de dato
             primaryKey:true,          //Clave primaria no se puede repetir
@@ -44,5 +44,5 @@ module.exports=(conexion)=>{
             type:Sequelize.INTEGER
         },
     });
-    return InventorySchedule;
+    return InventorySchema;
 }

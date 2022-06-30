@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 module.exports=(conexion)=>{
-    const ManagersSchedule=conexion.define('managers',{
+    const ManagersSchema=conexion.define('managers',{
         idManager:{
             type:Sequelize.INTEGER,   //Tipo de dato
             primaryKey:true,          //Clave primaria no se puede repetir
@@ -16,5 +16,5 @@ module.exports=(conexion)=>{
             foreingKey:true
         },
     });
-    return ManagersSchedule;
+    return ManagersSchema;
 }

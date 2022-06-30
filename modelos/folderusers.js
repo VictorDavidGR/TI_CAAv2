@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 module.exports=(conexion)=>{
-    const FolderUsersSchedule=conexion.define('foldersUsers',{
+    const FolderUsersSchema=conexion.define('foldersUsers',{
         idFAU:{
             type:Sequelize.INTEGER,   //Tipo de dato
             primaryKey:true,          //Clave primaria no se puede repetir
@@ -20,5 +20,5 @@ module.exports=(conexion)=>{
             foreingKey:true
         },
     });
-    return FolderUsersSchedule;
+    return FolderUsersSchema;
 }

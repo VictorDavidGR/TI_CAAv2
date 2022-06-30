@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 module.exports=(conexion)=>{
-    const deviceTypeSchedule=conexion.define('devicetype',{
+    const deviceTypeSchema=conexion.define('devicetype',{
         idDeviceType:{
             type:Sequelize.INTEGER,   //Tipo de dato
             primaryKey:true,          //Clave primaria no se puede repetir
@@ -11,5 +11,5 @@ module.exports=(conexion)=>{
             type:Sequelize.STRING
         },
     });
-    return RolesSchedule;
+    return deviceTypeSchema;
 }

@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 module.exports=(conexion)=>{
-    const AppUserschedule=conexion.define('appsUsers',{
+    const AppUsersSchema=conexion.define('appsUsers',{
         idAAU:{
             type:Sequelize.INTEGER,   //Tipo de dato
             primaryKey:true,          //Clave primaria no se puede repetir
@@ -20,5 +20,5 @@ module.exports=(conexion)=>{
             foreingKey:true
         },
     });
-    return AppUserschedule;
+    return AppUsersSchema;
 }
