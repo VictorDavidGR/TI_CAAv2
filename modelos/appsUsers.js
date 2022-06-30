@@ -1,7 +1,9 @@
 const Sequelize=require('sequelize');
 
 module.exports=(conexion)=>{
+
     const AppUsersSchema=conexion.define('appsUsers',{
+
         idAAU:{
             type:Sequelize.INTEGER,   //Tipo de dato
             primaryKey:true,          //Clave primaria no se puede repetir
@@ -19,6 +21,7 @@ module.exports=(conexion)=>{
             type:Sequelize.INTEGER,
             foreingKey:true
         },
-    });
+        });
     return AppUsersSchema;
-}
+    };
+

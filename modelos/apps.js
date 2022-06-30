@@ -12,4 +12,4 @@ module.exports=(conexion)=>{
         },
     });
     return AppsSchema;
-}
+};
