@@ -1,0 +1,31 @@
+<%- include('templates/encabezado')%>
+<%- include('templates/menu')%>
+    <div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form action="/guardarUsuario" method="POST">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Nuevo usuario</h1>
+                    </div>
+                    <div class="card-body">
+                        <input class="form-control mb-3" type="text" name="numEmpleado" id="numEmpleado" placeholder="No empleado">
+                        <input class="form-control mb-3" type="text" name="userName" id="userName" placeholder="Usuario">
+                        <input class="form-control mb-3" type="text" name="nameUser" id="nameUser" placeholder="Nombre">
+                        <input class="form-control mb-3" type="date" name="birthdayUser" id="birthdayUser" placeholder="Cumpleaños">
+                        <input class="form-control mb-3" type="text" name="textMail" id="textMail" placeholder="Correo">
+                        <input class="form-control mb-3" type="number" name="idDept" id="idDept" placeholder="Departamento">
+                        <input class="form-control mb-3" type="number" name="idArea" id="idArea" placeholder="Area">
+                        <input class="form-control mb-3" type="text" name="tipo" id="tipo" placeholder="Nivel">
+                        <input type="hidden" name="status" id="status" value="true">
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary col-12 mb-3 mt-3" href="/">Cancelar</a>
+                        <button class="btn btn-primary col-12 mb-3" type="submit">Guardar usuario</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+<%- include('templates/pie')%>

@@ -1,0 +1,61 @@
+<%- include('templates/encabezado')%>
+<%- include('templates/menu')%>
+<div class="row mt-5">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <a class="btn btn-primary mb-3" href="/insertar">Nuevo usuario</a>
+        <div class="card">
+            <div class="card-header">
+                <h1>Mostrar usuarios</h1>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>No empleado</th>
+                            <th>Usario</th>
+                            <th>Nombre</th>
+                            <th>Cumpleaños</th>
+                            <th>Correo</th>
+                            <th>Departamento</th>
+                            <th>LIO</th>
+                            <th>Area</th>
+                            <th>Nivel</th>
+                            <th>Editar/Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                            usuarios.forEach((usuario)=>{
+                        %>
+                            <tr class="align-middle">
+                                <td><%= usuario.idUser%></td>
+                                <td><%= usuario.numEmpleado%></td>
+                                <td><%= usuario.userName%></td>
+                                <td><%= usuario.nameUser%></td>
+                                <td><%= usuario.birthdayUser%></td>
+                                <td><%= usuario.textMail%></td>
+                                <td><%= usuario.idDept%></td>
+                                <td><%= usuario.linkLOI%></td>     
+                                <td><%= usuario.idArea%></td>
+                                <td><%= usuario.tipo%></td>
+                                <td>
+                                    <h3>
+                                    <a href="/buscarId/<%= usuario.idUser%>">📝</a>
+                                    <a href="/borradoLogico/<%= usuario.idUser%>">🗑</a><!--Lógico-->
+                                    <a href="/borradoFisico/<%= usuario.idUser%>">🗑</a><!--Físico-->
+                                    </h3>
+                                </td>
+                            </tr>
+                        <%
+                            });
+                        %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+<%- include('templates/pie')%>

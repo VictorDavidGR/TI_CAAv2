@@ -1,0 +1,26 @@
+<%- include('templates/encabezado')%>
+<%- include('templates/menu')%>
+<div class="row mt-5">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <form action="/login" method="POST">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Login</h1>
+                </div>
+                <div class="card-body">
+                                                                                    <!--id del objeto que se usara en .js-->
+                    <input class="form-control mb-3" type="text" name="usuarioLogin" id="usuarioLogin" placeholder="Usuario">
+                    <input class="form-control" type="password" name="passwordLogin" id="passwordLogin" placeholder="Numero Empleado">
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-secondary col-12 mt-3 mb-3" href="/">Cancelar</a>
+                    <button class="btn btn-primary col-12 mb-3" type="submit">Iniciar sesión</button>
+                </div>
+            </div>            
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+<%- include('templates/pie')%>

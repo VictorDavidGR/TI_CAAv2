@@ -1,0 +1,38 @@
+<%- include('templates/encabezado')%>
+<%- include('templates/menu')%>
+    <div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form action="/modificarUsuario" method="POST">
+                <% 
+                usuario.forEach((usuario)=>{                
+                %>
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Modificar usuario</h1>
+                    </div>
+                    <div class="card-body">
+                        <input name="no_empleado" id="idUserM" value="<%= usuario.idUser%>">
+                        <input class="form-control mb-3" type="text" name="numEmpleadoM" id="numEmpleadoM" placeholder="No empleado" value="<%= usuario.numEmpleado%>">
+                        <input class="form-control mb-3" type="text" name="userNameM" id="userNameM" placeholder="Usuario" value="<%= usuario.userName%>">
+                        <input class="form-control mb-3" type="text" name="nameUserM" id="nameUserM" placeholder="Nombre" value="<%= usuario.nameUser%>">
+                        <input class="form-control mb-3" type="date" name="birthdayUserM" id="birthdayUserM" placeholder="Cumpleaños" value="<%= usuario.birthdayUser%>">
+                        <input class="form-control mb-3" type="text" name="textMailM" id="textMailM" placeholder="Correo" value="<%= usuario.textMail%>">
+                        <input class="form-control mb-3" type="number" name="idDeptM" id="idDeptM" placeholder="Departamento" value="<%= usuario.idDept%>">
+                        <input class="form-control mb-3" type="number" name="idAreaM" id="idAreaM" placeholder="Area" value="<%= usuario.idArea%>">
+                        <input class="form-control mb-3" type="text" name="tipoM" id="tipoM" placeholder="Nivel" value="<%= usuario.tipo%>">
+                        <input type="hidden" name="status" id="status" value="true">
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary col-12 mb-3 mt-3" href="/mostrar">Cancelar</a>
+                        <button class="btn btn-primary col-12 mb-3" type="submit">Modificar usuario</button>
+                    </div>
+                </div>
+                <%
+                });
+                %>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+<%- include('templates/pie')%>
