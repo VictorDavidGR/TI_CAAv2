@@ -51,11 +51,11 @@ ruta.get('/logout',(req,res)=>{
 
 // Se crea la ruta y se renderiza la vista de inico
 ruta.get('/',(req,res)=>{
-    res.render('homeWeb');
+    res.render('login');
 });
 
-ruta.get('/inicioUsuario',(req,res)=>{
-    res.render('inicioUsuario');
+ruta.get('/inicioAdmin',(req,res)=>{
+    res.render('inicioAdmin');
 });
 
 // Ruta de insertar que renderisa el formulario de crear cuenta
@@ -63,7 +63,7 @@ ruta.get('/insertar',(req,res)=>{ // como quieres que se llame la extension
     res.render('insertarDatos');  // la vista que va a renderizar
 });
 
-ruta.post('/guardarUsuario',(req,res)=>{  // la se guardan los datos
+ruta.post('/guardarAdmin',(req,res)=>{  // la se guardan los datos
     Usuario.create(req.body)
     .then(()=>{
         res.redirect('/');         // muestra los datos enla ruta mostrar
