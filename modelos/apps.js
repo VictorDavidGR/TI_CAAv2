@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 module.exports=(conexion)=>{
-    const AppsSchedule=conexion.define('apps',{
+    const AppsSchema=conexion.define('apps',{
         idApp:{
             type:Sequelize.INTEGER,   //Tipo de dato
             primaryKey:true,          //Clave primaria no se puede repetir
@@ -11,5 +11,5 @@ module.exports=(conexion)=>{
             type:Sequelize.STRING
         },
     });
-    return AppsSchedule;
+    return AppsSchema;
 }
