@@ -5,42 +5,52 @@
         display: flex;
         flex-direction: column;
         color: white;
-        background-color: rgb(21, 21, 21) ;
+        background-image: url(../images/login.jpg);
         background-size:cover;
         background-repeat: no-repeat;
-        margin: 0;
-        height: 100vh;
+        height: 135vh;
+        width: 100%;        
     }
     .centrar-verticalmente{
-    margin-top: 28%;
+    margin-top: 25%;
     left: 50%;
     background: linear-gradient(180deg, #070707, #938413);
-    opacity: 0.95;
+    opacity: 0.8;
     border-radius: 20px;
     
     }
+    .zelda{
+      border-radius: 15px;
+    }
     .div{
-      min-height:100vh;/*importante*/
+      min-height:99vh;/*importante*/
       position: relative;
+      
+    }
+    .img{
+      width: 50%;
+      height: 50%;
+      
     }
     
     </style>
-    <body class="text-center card  body" style="align-items: center; height: 100vh;">
+    <body class="text-center card  body" style="align-items: center; ">
       <div class="div">
         <div class="centrar-verticalmente">
             <div class="card-body" style="align-items: center;width: 332px;height: 432px;">
                     <main class="form-signin w-100 m-auto">
                       <form>
-                        <img class="mb-4" src="img/logo.png"  width="72" height="57">
-                        <h1 class="h3 mb-3 fw-normal">Iniciar sesion</h1>
+                        <img class=" img" src="../images/logo.png">
+                        <h1 class="h3 mb-3 fw-normal">Bienvenido</h1>
+                        
                         <div class="card-body"> 
                             <div class="card-body">
                                 <!--id del objeto que se usara en .js-->
-                                <input class="form-control mb-3" type="text" name="usuarioLogin" id="usuarioLogin" placeholder="Usuario">
-                                <input class="form-control" type="password" name="passwordLogin" id="passwordLogin" placeholder="Numero Empleado">
-                            
-                                <button class="btn mt-3 col-12 mb-3" style="background-color: #E88100; color: white;" type="submit">Iniciar sesión</button>
-                                <a class="btn col-12  mb-3" style="background-color: rgb(197, 11, 11); color: white;" href="/">Cancelar</a>
+                                <input class="form-control mb-3 zelda" type="text" name="usuarioLogin" id="usuarioLogin" placeholder="Usuario">
+                                <input class="form-control zelda" type="password" name="passwordLogin" id="passwordLogin" placeholder="Contraseña">
+                            <div class="mt-4"></div>
+                                <button class="btn mt-3 col-12 mb-3 zelda" style="background-color: #E88100; color: white;" type="submit">Iniciar sesión</button>
+                                
                             </div>
                         </div>
                       </form>

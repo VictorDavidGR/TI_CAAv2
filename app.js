@@ -11,7 +11,7 @@ const app=express();
 
 app.set('view engine','ejs');
 
-app.use('/ticaa',express.static(path.join(__dirname,'webPages'))); //SITIO ESTÁTICO (SIN CONEXION A LA BD)
+app.use('/',express.static(path.join(__dirname,'webPages'))); //SITIO ESTÁTICO (SIN CONEXION A LA BD)
 
 app.use(express.urlencoded({extended:true}));//RECIBIR DATOS DEL FORMULARIO TRUE PARA ARCHIVOS, FALSE SOLO TEXTO
 
